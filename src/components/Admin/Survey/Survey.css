@@ -5,10 +5,17 @@
 }
 
 .Admin4-diabcare-admin-main-content {
-  flex: 1;
-  padding: 2.5rem;
+  display: flex;
 }
+.Admin4-main-content{
+ width: 100%;
+ padding: 2%;
 
+}
+.Admin4-container{
+  width: 100%;
+  display: flex;
+}
 .Admin4-main-title {
   font-size: 2.25rem;
   font-weight: 700;
@@ -19,7 +26,7 @@
 .Admin4-form-grid {
   display: grid;
   gap: 1.5rem;
-  max-width: 42rem;
+  width: 100%;
 }
 
 .Admin4-form-group {

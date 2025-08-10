@@ -1,0 +1,269 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  background-color: #ffffff;
+  color: #121417;
+}
+
+.admin-sett-dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.admin-sett-main-content {
+  padding: 2%;
+  width: 100%;
+}
+
+.admin-sett-content-wrapper {
+  width: 100%;
+}
+
+/* Header */
+.admin-sett-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.admin-sett-page-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #121417;
+}
+
+.admin-sett-save-button {
+  background-color: #0d80f2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}
+
+.admin-sett-save-button:hover {
+  background-color: #0b6fd1;
+}
+
+.admin-sett-save-button:active {
+  transform: translateY(1px);
+}
+
+/* Settings section */
+.admin-sett-settings-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #dbe0e5;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.admin-sett-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #121417;
+  margin-bottom: 24px;
+}
+
+/* Form fields */
+.admin-sett-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 2.5%;
+}
+
+.admin-sett-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-sett-field-label {
+  color: #121417;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.admin-sett-field-input {
+  padding: 10px 12px;
+  border: 1px solid #dbe0e5;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-sett-field-input:focus {
+  outline: none;
+  border-color: #0d80f2;
+  box-shadow: 0 0 0 3px rgba(13, 128, 242, 0.1);
+}
+
+.admin-sett-field-input::placeholder {
+  color: #61758a;
+}
+
+/* Expandable items */
+.admin-sett-expandable-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-sett-expandable-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.admin-sett-expandable-item:hover {
+  background-color: #f0f2f5;
+}
+
+.admin-sett-with-border {
+  border-bottom: 1px solid #dbe0e5;
+  margin-bottom: 8px;
+}
+
+.admin-sett-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-sett-item-main {
+  font-weight: 500;
+  color: #121417;
+  font-size: 14px;
+}
+
+.admin-sett-item-sub {
+  font-size: 12px;
+  color: #61758a;
+}
+
+.admin-sett-chevron {
+  color: #61758a;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.admin-sett-expandable-item:hover .admin-sett-chevron {
+  transform: translateX(2px);
+}
+
+/* Admins list */
+.admin-sett-admins-list ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #121417;
+  font-size: 14px;
+}
+
+.admin-sett-admins-list p {
+  font-size: 14px;
+  color: #61758a;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .admin-sett-main-content {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-sett-dashboard-container {
+    flex-direction: column;
+  }
+
+  .admin-sett-main-content {
+    padding: 16px;
+  }
+
+  .admin-sett-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .admin-sett-page-title {
+    font-size: 24px;
+  }
+
+  .admin-sett-save-button {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .admin-sett-settings-section {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-sett-form-fields {
+    gap: 16px;
+  }
+
+  .admin-sett-settings-section {
+    margin-bottom: 16px;
+  }
+}
+
+/* Focus states */
+.admin-sett-expandable-item:focus,
+.admin-sett-save-button:focus,
+.admin-sett-field-input:focus {
+  outline: 2px solid #0d80f2;
+  outline-offset: 2px;
+}
+
+/* Disabled states */
+.admin-sett-save-button:disabled {
+  background-color: #61758a;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.admin-sett-field-input:disabled {
+  background-color: #f0f2f5;
+  color: #61758a;
+  cursor: not-allowed;
+}
+
+/* Scrollbar */
+.admin-sett-main-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-sett-main-content::-webkit-scrollbar-track {
+  background: #f0f2f5;
+}
+
+.admin-sett-main-content::-webkit-scrollbar-thumb {
+  background: #dbe0e5;
+  border-radius: 3px;
+}
+
+.admin-sett-main-content::-webkit-scrollbar-thumb:hover {
+  background: #61758a;
+}

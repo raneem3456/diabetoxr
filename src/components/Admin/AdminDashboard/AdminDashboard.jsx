@@ -11,6 +11,7 @@ import {
   CartesianGrid,
 } from "recharts";
 import '../AdminDashboard/AdminDashboard.css'
+import SidebarAdmin from "../SidebarAdmin/SidebarAdmin";
 const AdminDashboard = () => {
   const [stats] = useState({
     newUsers: {
@@ -82,6 +83,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="admin-dashboard">
+      <SidebarAdmin/>
       <div className="admin-container">
         <div className="admin-header">
           <h1 className="admin-main-title">Admin Dashboard</h1>

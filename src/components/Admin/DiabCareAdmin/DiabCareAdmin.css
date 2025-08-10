@@ -1,15 +1,15 @@
 /* General Layout */
 .Admin3-app-container {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #ffffff; /* very light gray */
   font-family: sans-serif; /* Default font */
-  padding: 24px;
 }
 
 /* Main Content Header */
 .Admin3-content-header {
+  width: 100%;
+  padding: 2%;
   background-color: white;
   border-bottom: 1px solid #e5e8eb;
 }

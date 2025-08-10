@@ -66,6 +66,13 @@ import AdminDashboard from './components/Admin/AdminDashboard/AdminDashboard';
 import Consultations from './components/Admin/Consultations/Consultations';
 import DiabCareAdmin from './components/Admin/DiabCareAdmin/DiabCareAdmin';
 import Survey from './components/Admin/Survey/Survey';
+import RewardsTypes from './components/Admin/RewardsTypes/RewardsTypes';
+import Event from './components/Admin/Event/Event';
+import SystemSettings from './components/Admin/SystemSettings/SystemSettings';
+import UsersTablePage from './components/Admin/UsersTable/UsersTablePage';
+import ReportsAnalyticsPage from './components/Admin/ReportsAnalyticsPage/ReportsAnalyticsPage';
+import AdminAds from './components/Admin/AdminAds/AdminAds';
+import ContentManagement from './components/Admin/ContentManagement/ContentManagement';
 
 
 function App() {
@@ -136,10 +143,28 @@ function App() {
         <Route path="/login" element={<HealthcareLogin />} />
         <Route path="/patients/coach/:coachId/Profile_Pat/:id" element={<FitnessPlanner />} />
 
-       <Route path='/AdminDashboard' element={<AdminDashboard/>}/>
+    {/*   <Route path='/AdminDashboard' element={<AdminDashboard/>}/>
        <Route path='/Consultations' element={<Consultations/>}/>
        <Route path='/DiabCareAdmin' element={<DiabCareAdmin/>}/>
        <Route path='/Survey' element={<Survey/>}/>
+       <Route path='/RewardsTypes' element={<RewardsTypes/>}/>
+       <Route path='/Event'element={<Event/>}/>
+       <Route path='/SystemSettings' element={<SystemSettings/>}/>
+       <Route path='/UsersTablePage' element={<UsersTablePage/>}/>
+*/}
+<Route path='/dashboard/admin/:adminId/AdminDashboard' element={<AdminDashboard/>}/>
+<Route path='/dashboard/admin/:adminId/Consultations' element={<Consultations/>}/>
+<Route path='/dashboard/admin/:adminId/DiabCareAdmin' element={<DiabCareAdmin/>}/>
+<Route path='/dashboard/admin/:adminId/Survey' element={<Survey/>}/>
+<Route path='/dashboard/admin/:adminId/RewardsTypes' element={<RewardsTypes/>}/>
+<Route path='/dashboard/admin/:adminId/Event' element={<Event/>}/>
+<Route path='/dashboard/admin/:adminId/SystemSettings' element={<SystemSettings/>}/>
+<Route path='/dashboard/admin/:adminId/UsersTablePage' element={<UsersTablePage/>}/>
+<Route path='/dashboard/admin/:adminId/ReportsAnalyticsPage' element={<ReportsAnalyticsPage/>}/>
+<Route path='/dashboard/admin/:adminId/AdminAds' element={<AdminAds/>}/>
+<Route path='/dashboard/admin/:adminId/ContentManagement' element={<ContentManagement/>}/>
+<Route path='dashboard/admin/:adminId/AdminAds' element={<AdminAds/>}/>
+
 
         <Route path="/nutritionist/:nutId/dashboard" element={<NutrDashboard />} />// 1. لوحة تحكم الأخصائي
         <Route path="/nutritionist/:nutId/patients" element={<PatientsListPage />} />// 2. قائمة المرضى للأخصائي

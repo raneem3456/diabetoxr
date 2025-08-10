@@ -1,0 +1,224 @@
+.Admin-Content-dashboard-container {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fb;
+  min-height: 100vh;
+  display: flex;
+}
+
+.Admin-Content-page-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.Admin-Content-main-tabs {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.Admin-Content-main-content{
+    width: 100%;
+    padding: 2%;
+}
+.Admin-Content-tab-button {
+  background-color: #e9ecef;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.Admin-Content-tab-active {
+  background-color: #0d80f2;
+  color: #fff;
+}
+
+.Admin-Content-tab-button:hover {
+  background-color: #d1d5da;
+}
+
+.Admin-Content-search-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #dbe0e5;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+}
+
+.Admin-Content-search-icon {
+  color: #999;
+  margin-right: 8px;
+}
+
+.Admin-Content-search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+.Admin-Content-table-container {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #dbe0e5;
+  border-radius: 8px;
+}
+
+.Admin-Content-data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Admin-Content-data-table th,
+.Admin-Content-data-table td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.Admin-Content-data-table thead {
+  background-color: #f1f3f5;
+  font-weight: bold;
+}
+
+.Admin-Content-data-table tbody tr {
+  border-top: 1px solid #dbe0e5;
+}
+
+.Admin-Content-data-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* ====== شارات الحالة ====== */
+.Admin-Content-status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.Admin-Content-status-published {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.Admin-Content-status-draft {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.Admin-Content-edit-button {
+  background-color: #f1f3f5;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.Admin-Content-edit-button:hover {
+  background-color: #e2e6ea;
+}
+
+.Admin-Content-primary-button {
+  background-color: #0d80f2;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.Admin-Content-primary-button:hover {
+  background-color: #0b6ed0;
+}
+
+.Admin-Content-action-button-container {
+  margin-top: 16px;
+  text-align: right;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 95%;
+}
+
+.modal h3 {
+  margin-bottom: 16px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dbe0e5;
+  border-radius: 6px;
+}
+
+.modal select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dbe0e5;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+  color: #121417;
+}
+
+.modal button {
+  padding: 8px 14px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal button:first-of-type {
+  background-color: #0d80f2;
+  color: white;
+}
+
+.modal button:last-of-type {
+  background-color: #e2e6ea;
+}
+
+@media (max-width: 768px) {
+  .Admin-Content-dashboard-container {
+    padding: 10px;
+  }
+
+  .Admin-Content-main-tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .Admin-Content-data-table {
+    min-width: 600px;
+  }
+}

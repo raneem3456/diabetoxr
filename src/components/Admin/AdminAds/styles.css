@@ -1,0 +1,105 @@
+.admin-ads-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.admin-ads-main-content {
+  flex: 1;
+  padding: 32px;
+}
+
+.admin-ads-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #121417;
+  margin-bottom: 24px;
+}
+
+.admin-ads-create-button {
+  background-color: #121417;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-ads-table-container {
+  border-radius: 8px;
+  border: 1px solid #dbe0e5;
+  overflow: hidden;
+}
+
+.admin-ads-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-ads-head {
+  text-align: left;
+  color: #61758a;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 16px;
+}
+
+.admin-ads-head.admin-ads-text-right {
+  text-align: right;
+}
+
+.admin-ads-row {
+  border-bottom: 1px solid #e5e8eb;
+}
+
+.admin-ads-cell {
+  padding: 12px 16px;
+  color: #121417;
+}
+
+.admin-ads-font-medium {
+  font-weight: 500;
+}
+
+.admin-ads-text-muted {
+  color: #61758a;
+}
+
+.admin-ads-text-right {
+  text-align: right;
+}
+
+.admin-ads-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.admin-ads-badge-active {
+  background-color: #f0f2f5;
+  color: #121417;
+}
+
+.admin-ads-badge-inactive {
+  background-color: #f0f2f5;
+  color: #61758a;
+}
+
+.admin-ads-action-link {
+  color: #61758a;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-ads-action-link:hover {
+  text-decoration: underline;
+}

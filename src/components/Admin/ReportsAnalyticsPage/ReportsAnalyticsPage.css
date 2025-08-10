@@ -1,0 +1,238 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Colors */
+:root {
+  --color-white: #ffffff;
+  --color-dark-text: #121417;
+  --color-light-bg: #f0f2f5;
+  --color-border: #dbe0e5;
+  --color-lighter-border: #e5e8eb;
+  --color-muted-text: #61758a;
+  --color-green: #088738;
+}
+
+/* Container */
+.Rep-admin-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #ffffff ;
+}
+
+/* Main Content */
+.Rep-admin-main-content {
+  flex: 1;
+  padding: 2rem; /* 8 units * 0.25rem/unit = 2rem */
+}
+
+.Rep-admin-main-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 2rem; /* mb-8 */
+  color: var(--color-dark-text);
+}
+
+/* Section styles */
+.Rep-admin-section {
+  margin-bottom: 2.5rem; /* mb-10 */
+}
+
+.Rep-admin-section-title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 1rem; /* mb-4 */
+  color: var(--color-dark-text);
+}
+
+/* Tabs Component */
+.Rep-admin-tabs-container {
+  width: 100%;
+}
+
+.Rep-admin-tabs-list {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+  padding: 0;
+  height: auto;
+  display: flex;
+}
+
+.Rep-admin-tabs-trigger {
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  font-size: 1rem; /* text-base */
+  font-weight: 500; /* font-medium */
+  color: var(--color-muted-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s ease-in-out;
+  border-bottom: 2px solid transparent; /* For active state */
+  margin-bottom: -1px; /* To align with border-bottom of tabs-list */
+}
+
+.Rep-admin-tabs-trigger:hover {
+  color: var(--color-dark-text);
+}
+
+.Rep-admin-tabs-trigger-active {
+  color: var(--color-dark-text);
+  border-bottom-color: var(--color-dark-text);
+  box-shadow: none;
+}
+
+.Rep-admin-tabs-content {
+  margin-top: 1.5rem; /* mt-6 */
+  background-color: #f0f2f5;
+  padding: 1.5rem; /* p-6 */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+}
+
+.Rep-admin-tabs-content:not(.Rep-admin-tabs-content-active) {
+  display: none;
+}
+
+/* Performance Reports specific styles */
+.Rep-admin-feature-usage-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem; /* gap-2 */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.Rep-admin-feature-usage-label {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  color: var(--color-muted-text);
+}
+
+.Rep-admin-feature-usage-percentage {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700; /* font-bold */
+  color: var(--color-dark-text);
+}
+
+.Rep-admin-feature-usage-period {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem; /* gap-2 */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.Rep-admin-feature-usage-days {
+  font-size: 0.875rem; /* text-sm */
+  color: var(--color-muted-text);
+}
+
+.Rep-admin-feature-usage-change {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: var(--color-green);
+}
+
+.Rep-admin-bar-chart-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 8rem; /* h-32 */
+}
+
+.Rep-admin-bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Rep-admin-bar {
+  width: 2.5rem; /* w-10 */
+  background-color: var(--color-lighter-border);
+  border-top-left-radius: 0.375rem; /* rounded-t-md */
+  border-top-right-radius: 0.375rem; /* rounded-t-md */
+}
+
+/* Specific bar heights */
+.Rep-admin-h-24 {
+  height: 6rem;
+} /* h-24 */
+.Rep-admin-h-28 {
+  height: 7rem;
+} /* h-28 */
+.Rep-admin-h-20 {
+  height: 5rem;
+} /* h-20 */
+.Rep-admin-h-22 {
+  height: 5.5rem;
+} /* h-22 */
+.Rep-admin-h-26 {
+  height: 6.5rem;
+} /* h-26 */
+
+.Rep-admin-bar-label {
+  margin-top: 0.5rem; /* mt-2 */
+  font-size: 0.875rem; /* text-sm */
+  color: var(--color-muted-text);
+}
+
+.Rep-admin-specialist-ratings-placeholder {
+  color: var(--color-muted-text);
+}
+
+/* Table styles */
+.Rep-admin-table-container {
+  background-color: var(--color-white);
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  overflow: hidden; /* overflow-hidden */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--color-light-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.Rep-admin-table-header {
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  text-align: left;
+  color: var(--color-muted-text);
+  font-weight: 500; /* font-medium */
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+tbody tr:last-child {
+  border-bottom: none; /* Remove border for the last row */
+}
+
+.Rep-admin-table-cell {
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  color: var(--color-dark-text);
+}
+
+.Rep-admin-table-cell-muted {
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  color: var(--color-muted-text);
+}
+
+.Rep-admin-table-link {
+  color: var(--color-muted-text);
+  text-decoration: none;
+}
+
+.Rep-admin-table-link:hover {
+  text-decoration: underline;
+}

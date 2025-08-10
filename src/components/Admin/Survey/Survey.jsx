@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import '../Survey/Survey.css'
+import SidebarAdmin from '../SidebarAdmin/SidebarAdmin';
 const rolesList = [
   { label: 'All', value: 'all' },
   { label: 'User', value: 'user' },
   { label: 'Doctor', value: 'doctor' },
-  { label: 'أخصائي تغذية', value: 'nutritionist' },
+  { label: 'Nutritionist', value: 'nutritionist' },
   { label: 'Coach', value: 'coach' },
   { label: 'Family', value: 'family' },
-  { label: 'المريض', value: 'patient' },
+  { label: 'Patient', value: 'patient' },
 ];
 
 const Survey = () => {
@@ -51,6 +52,7 @@ const Survey = () => {
 
   return (
     <div className="Admin4-container">
+      <SidebarAdmin/>
       <main className="Admin4-main-content">
         <h1 className="Admin4-main-title">Create Poll/Survey</h1>
 

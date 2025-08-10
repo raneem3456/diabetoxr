@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import './Consultations.css';
+import SidebarAdmin from '../SidebarAdmin/SidebarAdmin';
 
 function Consultations() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -56,7 +57,8 @@ function Consultations() {
 
   return (
     <div className="admin1-app">
-
+      <SidebarAdmin/>
+      <div className="Felx-Admin1">
       <div className="admin1-page-header">
         <h1>Consultations</h1>
         <p>Manage and monitor all patient consultations with the care team.</p>
@@ -135,6 +137,7 @@ function Consultations() {
           ))}
           <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(prev => prev + 1)}>{'>'}</button>
         </div>
+      </div>
       </div>
     </div>
   );

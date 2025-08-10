@@ -1,0 +1,265 @@
+/* General Layout */
+.Admin-Das-app-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #121417;
+  width: 100%;
+  display: flex;
+}
+
+.Admin-Das-main-content-wrapper {
+  padding: 2%;
+  width: 100%;
+  gap: 1.5rem; /* 24px */
+}
+
+@media (min-width: 768px) {
+  .Admin-Das-main-content-wrapper {
+    padding: 2rem 1rem; /* 32px 16px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .Admin-Das-main-content-wrapper {
+    padding: 2.5rem 1rem; /* 40px 16px */
+  }
+}
+
+/* Content Section */
+.Admin-Das-content-section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.Admin-Das-content-header {
+  margin-bottom: 1rem; /* 16px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Admin-Das-content-title {
+  font-size: 1.8rem; /* 14px */
+  font-weight: 500;
+  color: #121417;
+  margin: 0; /* Reset default h1 margin */
+}
+
+.Admin-Das-add-patient-button {
+  height: 2.25rem; /* 36px */
+  border-radius: 0.375rem; /* 6px */
+  border: 1px solid #e5e8eb;
+  background-color: #f0f2f5;
+  padding: 0 0.75rem; /* 0 12px */
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500;
+  color: #121417;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.Admin-Das-add-patient-button:hover {
+  background-color: #e5e8eb;
+}
+
+/* Search Input */
+.Admin-Das-search-section {
+  margin-bottom: 1rem; /* 16px */
+}
+
+.Admin-Das-search-input-container {
+  position: relative;
+}
+
+.Admin-Das-search-input-icon {
+  position: absolute;
+  left: 0.75rem; /* 12px */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1rem; /* 16px */
+  width: 1rem; /* 16px */
+  color: #61758a;
+  pointer-events: none;
+}
+
+.Admin-Das-search-input-field {
+  height: 2.5rem; /* 40px */
+  width: 100%;
+  border-radius: 0.375rem; /* 6px */
+  border: 1px solid #e5e8eb;
+  background-color: #f0f2f5;
+  padding-left: 2.25rem; /* 36px (for icon) */
+  padding-right: 0.75rem; /* 12px */
+  font-size: 0.875rem; /* 14px */
+  color: #121417;
+  outline: none; /* Remove default focus outline */
+}
+
+.Admin-Das-search-input-field::placeholder {
+  color: #61758a;
+}
+
+.Admin-Das-search-input-field:focus {
+  border-color: #61758a; /* Example focus style */
+}
+
+/* Card */
+.Admin-Das-card {
+  border-radius: 0.5rem; /* 8px */
+  border: 1px solid #e5e8eb;
+  background-color: #ffffff;
+  overflow: hidden; /* For table inside */
+}
+
+/* Users Table */
+.Admin-Das-users-table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* For responsiveness on small screens */
+}
+
+.Admin-Das-users-table {
+  width: 100%;
+  border-collapse: collapse; /* Remove space between cells */
+}
+
+.Admin-Das-users-table-header-row {
+  border-bottom: 1px solid #e5e8eb;
+}
+
+.Admin-Das-users-table-head {
+  padding: 0.75rem 1rem; /* 12px 16px */
+  text-align: left;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500;
+  color: #61758a;
+  white-space: nowrap;
+}
+
+.Admin-Das-users-table-row {
+  transition: background-color 0.15s ease-in-out;
+}
+
+.Admin-Das-has-border-bottom {
+  border-bottom: 1px solid #e5e8eb;
+}
+
+.Admin-Das-users-table-row:hover {
+  background-color: transparent; /* Keep background white on hover */
+}
+
+.Admin-Das-users-table-cell {
+  padding: 1.25rem 1rem; /* 20px 16px */
+  font-size: 0.875rem; /* 14px */
+  color: #121417;
+  white-space: nowrap;
+}
+
+.Admin-Das-users-table-cell-muted {
+  color: #61758a;
+}
+
+.Admin-Das-table-chip {
+  display: inline-flex;
+  height: 1.75rem; /* 28px */
+  align-items: center;
+  border-radius: 0.375rem; /* 6px */
+  border: 1px solid #e5e8eb;
+  background-color: #f0f2f5;
+  padding: 0 0.5rem; /* 0 8px */
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500;
+  color: #121417;
+}
+
+/* Pagination */
+.Admin-Das-pagination-container {
+  margin-top: 1.5rem; /* 24px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem; /* 4px */
+  font-size: 0.75rem; /* 12px */
+  color: #61758a;
+}
+
+.Admin-Das-pagination-arrow-button {
+  display: flex;
+  height: 1.75rem; /* 28px */
+  width: 1.75rem; /* 28px */
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px; /* full circle */
+  border: 1px solid transparent;
+  color: #61758a;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.Admin-Das-pagination-arrow-button:hover {
+  border-color: #e5e8eb;
+  background-color: #f0f2f5;
+}
+
+.Admin-Das-pagination-arrow-button svg {
+  height: 1rem; /* 16px */
+  width: 1rem; /* 16px */
+}
+
+.Admin-Das-page-dot {
+  display: flex;
+  height: 1.75rem; /* 28px */
+  min-width: 1.75rem; /* 28px */
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px; /* full circle */
+  padding: 0 0.5rem; /* 0 8px */
+  background-color: transparent;
+  border: none;
+  color: #61758a;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.Admin-Das-active {
+  background-color: #f0f2f5;
+  font-weight: 500;
+  color: #121417;
+}
+
+.Admin-Das-page-dot:not(.Admin-Das-active):hover {
+  background-color: #f0f2f5;
+  color: #121417;
+}
+
+.Admin-Das-pagination-ellipsis {
+  padding: 0 0.25rem; /* 0 4px */
+}
+
+/* Reference Details (Collapsible) */
+.Admin-Das-reference-details {
+  margin-top: 2rem; /* 32px */
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.5rem; /* 8px */
+  border: 1px solid #e5e8eb;
+  background-color: #ffffff;
+  padding: 1rem; /* 16px */
+  font-size: 0.75rem; /* 12px */
+  color: #61758a;
+}
+
+.Admin-Das-reference-image-wrapper {
+  margin-top: 0.75rem; /* 12px */
+  overflow: hidden;
+  border-radius: 0.375rem; /* 6px */
+  border: 1px solid #e5e8eb;
+}
+
+.Admin-Das-reference-image {
+  height: auto;
+  width: 100%;
+  display: block; /* Remove extra space below image */
+}

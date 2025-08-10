@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HelpCircle } from 'lucide-react';
 import '../DiabCareAdmin/DiabCareAdmin.css'
+import SidebarAdmin from '../SidebarAdmin/SidebarAdmin';
 
 const DiabCareAdmin = () => {
   const [tickets, setTickets] = useState([
@@ -58,7 +59,7 @@ const DiabCareAdmin = () => {
 
   return (
     <div className="Admin3-app-container">
-      {/* Header */}
+      <SidebarAdmin/>
       <div className="Admin3-content-header">
         <h1 className="Admin3-page-title">Support</h1>
       
