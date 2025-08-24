@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('emergency_alerts', function (Blueprint $table) {
+            $table->id('alert_id');
+            $table->unsignedBigInteger('patient_id');
+            $table->foreign('patient_id')->references('patient_id')->on('patients')->onDelete('cascade');
+            $table->timestamp('triggered_at');
+            $table->string('location');
+            $table->enum('status', ['pending', 'resolved', 'cancelled'])->default('pending');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('emergency_alerts');
+    }
+};
